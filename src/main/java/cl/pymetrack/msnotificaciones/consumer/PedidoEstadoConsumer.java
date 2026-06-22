@@ -89,6 +89,7 @@ public class PedidoEstadoConsumer {
         String estado = estadoNuevo == null ? "" : estadoNuevo.trim().toUpperCase();
 
         return estado.equals("ASIGNADO")
+                || estado.equals("PEDIDO_RETIRADO")
                 || estado.equals("EN_CAMINO")
                 || estado.equals("ENTREGADO")
                 || estado.equals("RECHAZADO")

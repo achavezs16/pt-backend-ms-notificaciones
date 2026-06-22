@@ -14,6 +14,7 @@ public class NotificationTemplateService {
             case "ENTREGADO" -> "Tu pedido #" + pedidoId + " fue entregado";
             case "RECHAZADO" -> "Actualización de tu pedido #" + pedidoId;
             case "CANCELADO" -> "Tu pedido #" + pedidoId + " fue cancelado";
+            case "PEDIDO_RETIRADO" -> "Tu pedido #" + pedidoId + " fue retirado";
             default -> "Actualización de tu pedido #" + pedidoId;
         };
     }
@@ -64,6 +65,7 @@ public class NotificationTemplateService {
     private String obtenerTitulo(String estado) {
         return switch (estado) {
             case "ASIGNADO" -> "Tu pedido fue asignado";
+            case "PEDIDO_RETIRADO" -> "Tu pedido fue retirado";
             case "EN_CAMINO" -> "Tu pedido está en camino";
             case "ENTREGADO" -> "Tu pedido fue entregado";
             case "RECHAZADO" -> "No fue posible continuar con tu pedido";
@@ -75,6 +77,7 @@ public class NotificationTemplateService {
     private String obtenerMensaje(String estado) {
         return switch (estado) {
             case "ASIGNADO" -> "Tu pedido ya fue asignado a un repartidor. Pronto comenzará el proceso de despacho.";
+            case "PEDIDO_RETIRADO" -> "Tu pedido fue retirado";
             case "EN_CAMINO" -> "Tu pedido ya salió a despacho y va camino a la dirección registrada.";
             case "ENTREGADO" -> "Tu pedido fue entregado correctamente. Gracias por utilizar PymeTrack.";
             case "RECHAZADO" -> "El pedido no pudo ser aceptado o procesado por el repartidor asignado.";
