@@ -6,10 +6,16 @@ spring:
     name: ms-notificaciones
 
   rabbitmq:
-    host: localhost
+    host: rabbitmq
     port: 5672
     username: guest
     password: guest
+
+sendgrid:
+  api-key: ${SENDGRID_API_KEY:}
+  from-email: ${SENDGRID_FROM_EMAIL:}
+  from-name: ${SENDGRID_FROM_NAME:PymeTrack}
+  enabled: ${SENDGRID_ENABLED:true}
 
 logging:
   level:
