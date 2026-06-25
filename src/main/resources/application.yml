@@ -6,7 +6,7 @@ spring:
     name: ms-notificaciones
 
   rabbitmq:
-    host: 172.31.57.91
+    host: 172.31.18.6
     port: 5672
     username: guest
     password: guest
